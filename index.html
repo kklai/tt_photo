@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="//s3.amazonaws.com/cdn.texastribune.org/lib/tt_flexislider/css/TTslider.css">
+	<style type="text/css">
+		#carousel li {margin: 10px -20px 0px 0px; overflow: hidden;}
+		#carousel img {display: block; opacity: .7; cursor: pointer; margin: 0px 0px -10px -30px;}
+		#carousel img:hover {opacity: 1;}
+		#carousel .flex-active-slide img {opacity: 1; cursor: default;}
+		ol {display:none;}
+	</style>
+</head>
+<body>
+	<!-- Place somewhere in the <body> of your page -->
+<div id="slider" class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-13.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-09.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-06.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-14.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-13.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-09.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-06.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-14.jpg" />
+    </li>
+  </ul>
+</div>
+
+<div id="carousel" class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-13.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-09.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-06.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-14.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-13.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-09.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-06.jpg" />
+    </li>
+    <li>
+      <img src="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/07/09/Rally-Slide-14.jpg" />
+    </li>
+	</ul>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="//s3.amazonaws.com/cdn.texastribune.org/lib/jquery.flexslider/2.1/jquery.flexslider.js"></script>
+ <script>
+    $(window).load(function() {
+    	$('#carousel').flexslider({
+    		itemWidth: 100,
+        itemMargin: 5,
+        slideshow:false,
+        asNavFor: '#slider',
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+    	});
+      $('#slider').flexslider({
+      	slideshow:false,
+      	controlnav:false,
+      	sync: "#carosel"
+      });
+    });
+</script>
+
+</body>
+</html>
