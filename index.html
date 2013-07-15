@@ -3,8 +3,9 @@
 	<title></title>
 	<link rel="stylesheet" href="//s3.amazonaws.com/cdn.texastribune.org/lib/tt_flexislider/css/TTslider.css">
 	<style type="text/css">
+    body {width: 50%;}
 		#carousel li {margin: 10px -20px 0px 0px; overflow: hidden;}
-		#carousel img {display: block; opacity: .7; cursor: pointer; margin: 0px 0px -10px -30px;}
+		#carousel img {display: block; opacity: .6; cursor: pointer; margin: 0px 0px -10px -30px;}
 		#carousel img:hover {opacity: 1;}
 		#carousel .flex-active-slide img {opacity: 1; cursor: default;}
 		ol {display:none;}
@@ -73,23 +74,24 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="//s3.amazonaws.com/cdn.texastribune.org/lib/jquery.flexslider/2.1/jquery.flexslider.js"></script>
- <script>
-    $(window).load(function() {
-    	$('#carousel').flexslider({
-    		itemWidth: 100,
-        itemMargin: 5,
-        slideshow:false,
-        asNavFor: '#slider',
-        animation: "slide",
-        controlNav: false,
-        animationLoop: false,
-    	});
-      $('#slider').flexslider({
-      	slideshow:false,
-      	controlnav:false,
-      	sync: "#carosel"
-      });
+<script>
+  $(window).load(function() {
+  	$('#carousel').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: false,
+      slideshow:false,
+      itemWidth: 100,
+      itemMargin: 5,
+      asNavFor: '#slider',
+  	});
+    $('#slider').flexslider({
+      controlnav:false,
+      animationLoop:false,
+    	slideshow:false,
+    	sync: "#carousel"
     });
+  });
 </script>
 
 </body>
